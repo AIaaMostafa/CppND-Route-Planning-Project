@@ -64,6 +64,20 @@ int main(int argc, const char **argv)
     std::cin >> end_x;
     std::cout << "end_y =";
     std::cin >> end_y;
+    if (start_x < 0 || start_x > 100 || start_y < 0 || start_y > 100 
+      ||  end_x < 0 || end_x > 100 || end_y < 0 || end_y > 100)
+    {
+        std::cout << "Please enter valid range between 0 and 100 for x and y \n";
+        std::cout << "start_x =";
+        std::cin >> start_x;
+        std::cout << "start_y =";
+        std::cin >> start_y;
+        std::cout << "end_x =";
+        std::cin >> end_x;
+        std::cout << "end_y =";
+        std::cin >> end_y;
+    }
+
     // Build Model.
     RouteModel model{osm_data};
 
